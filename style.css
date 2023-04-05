@@ -17,16 +17,16 @@ body{
 }
 
 .triangle-vertical {
-    width: 800px; /* замените на нужную ширину блока */
-    height: 400px; /* замените на нужную высоту блока */
+    width: 800px; 
+    height: 400px;
     overflow: hidden;
     position: relative;
     z-index: 7;
 }
 .triangle-horizontally{
     display: flex;
-    width: 400px; /* замените на нужную ширину блока */
-    height: 800px; /* замените на нужную высоту блока */
+    width: 400px; 
+    height: 800px;
     overflow: hidden;
     position: relative;
 }
@@ -36,9 +36,9 @@ body{
     height: 50%;
     object-fit: cover;
     clip-path: polygon(
-      0% 0%, /* верхний левый угол */
-      50% 100%, /* нижний центр */
-      100% 0% /* верхний правый угол */
+      0% 0%,
+      50% 100%, 
+      100% 0% /
     );
     
 
@@ -46,9 +46,9 @@ body{
 
 .triangle-vertical img:nth-child(2) {
     clip-path: polygon(
-      0% 100%, /* нижний левый угол */
-      50% 0%, /* верхний центр */
-      100% 100% /* нижний правый угол */
+      0% 100%, 
+      50% 0%, 
+      100% 100% 
     );
     
 }
@@ -58,17 +58,17 @@ body{
     height: 50%;
     object-fit: cover;
     clip-path: polygon(
-      0% 0%, /* верхний левый угол */
-      100% 50%, /* нижний центр */
-      0% 100% /* верхний правый угол */
+      0% 0%, 
+      100% 50%,
+      0% 100% 
     );
 }
 
 .triangle-horizontally img:nth-child(2) {
     clip-path: polygon(
-      100% 0%, /* нижний левый угол */
-      0% 50%, /* верхний центр */
-      100% 100% /* нижний правый угол */
+      100% 0%, 
+      0% 50%,
+      100% 100% 
     );
 }
 
