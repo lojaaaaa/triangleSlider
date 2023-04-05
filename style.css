@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gainsboro;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 400px;
+    padding-top: 250px;
+}
+.triangle-block{
+    position: relative;
+}
+
+.triangle-vertical {
+    width: 800px; /* замените на нужную ширину блока */
+    height: 400px; /* замените на нужную высоту блока */
+    overflow: hidden;
+    position: relative;
+    z-index: 7;
+}
+.triangle-horizontally{
+    display: flex;
+    width: 400px; /* замените на нужную ширину блока */
+    height: 800px; /* замените на нужную высоту блока */
+    overflow: hidden;
+    position: relative;
+}
+
+.triangle-vertical>img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    clip-path: polygon(
+      0% 0%, /* верхний левый угол */
+      50% 100%, /* нижний центр */
+      100% 0% /* верхний правый угол */
+    );
+    
+
+}
+
+.triangle-vertical img:nth-child(2) {
+    clip-path: polygon(
+      0% 100%, /* нижний левый угол */
+      50% 0%, /* верхний центр */
+      100% 100% /* нижний правый угол */
+    );
+    
+}
+
+.triangle-horizontally>img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    clip-path: polygon(
+      0% 0%, /* верхний левый угол */
+      100% 50%, /* нижний центр */
+      0% 100% /* верхний правый угол */
+    );
+}
+
+.triangle-horizontally img:nth-child(2) {
+    clip-path: polygon(
+      100% 0%, /* нижний левый угол */
+      0% 50%, /* верхний центр */
+      100% 100% /* нижний правый угол */
+    );
+}
+
+
+
+.triangle-vertical{
+    position: relative;
+}
+
+.triangle-horizontally{
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: 2px;
+}
+img{
+    overflow: hidden;
+}
+
+.triangle-text{
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    
+}
+.triangle-text>p:first-child{
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    z-index: 12;
+    padding: 34px;
+    cursor: pointer;
+    background-color: rgba(79, 79, 79, .5);
+    border-radius: 5px;
+}
+.triangle-text>p:nth-child(2){
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    z-index: 12;
+    padding: 34px;
+    cursor: pointer;
+    background-color: rgba(79, 79, 79, .5);
+    border-radius: 5px;
+}
+
+.triangle-text>p:nth-child(3){
+    position: absolute;
+    left: 40%;
+    bottom: 10%;
+    z-index: 12;
+    padding: 34px;
+    cursor: pointer;
+    background-color: rgba(79, 79, 79, .5);
+    border-radius: 5px;
+}
+
+.triangle-text>p:nth-child(4){
+    position: absolute;
+    right: 10%;
+    top: 35%;
+    z-index: 12;
+    padding: 34px;
+    cursor: pointer;
+    background-color: rgba(79, 79, 79, .5);
+    border-radius: 5px;
+}
+.triangle-text>p:hover, .cross:hover, #left:hover, #right:hover{
+    opacity: .7;
+}
+
+.image-show{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    z-index: 50;
+}
+.hidden{
+    display: none;
+}
+.cross{
+    position: absolute;
+    right: 15px;
+    top: 0;
+    font-size: 32px;
+    color: white;
+    z-index: 60;
+    cursor: pointer;
+}
+#left, #right{
+    font-size: 30px;
+    color: white;
+    background-color: rgba(79, 79, 79, .5);
+    padding: 15px;
+    cursor: pointer;
+    z-index: 60;
+}
+#left{
+    position: absolute;
+    left: 0;
+    top: 40%;
+}
+#right{
+    position: absolute;
+    right: 0;
+    top: 40%;
+}
